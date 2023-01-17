@@ -1,0 +1,74 @@
+<div class="container">
+  <!-- USER INPUT -->
+  <form>
+    <mat-error *ngIf="errorMessage">{{ errorMessage }}</mat-error>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Start time</mat-label>
+        <input
+          matInput
+          type="number"
+          min="0"
+          max="540"
+          placeholder="30"
+          name="startTime"
+          [(ngModel)]="startTime"
+        />
+        <mat-hint>Should not be less than 0</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>End time</mat-label>
+        <input
+          matInput
+          min="0"
+          max="540"
+          placeholder="540"
+          name="endTime"
+          [(ngModel)]="endTime"
+        />
+        <mat-hint>Should not be greater than 540</mat-hint>
+      </mat-form-field>
+    </p>
+    <p>
+      <button mat-raised-button color="primary" (click)="addEvent()">
+        Add Event
+      </button>
+    </p>
+  </form>
+  <strong>OR</strong>
+  <form>
+    <p>
+      <mat-form-field appearance="outline">
+        <mat-label>Events Array</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="[{start: 30: end: 300}]"
+          name="eventsArrayJson"
+          [(ngModel)]="eventsArrayJson"
+        />
+      </mat-form-field>
+    </p>
+    <button mat-raised-button color="primary" (click)="addEventsArray()">
+      Add Events Array
+    </button>
+  </form>
+  <br />
+<!-- Calendar -->
+  <div class="time-box">
+    <header>Time</header>
+    <!-- Working Hours -->
+    <div *ngFor="let arr of timeArray; index as i">
+      <div class="cols">{{ arr.time }}</div>
+    </div>
+  </div>
+  <div class="event-box">
+    <!-- Events -->
+    <header>Events</header>
+    <div *ngFor="let arr of timeArray; index as i">
+      <div class="cols" [id]="i"></div>
+    </div>
+  </div>
+</div>

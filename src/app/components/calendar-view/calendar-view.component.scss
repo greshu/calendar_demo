@@ -1,0 +1,46 @@
+.container {
+  height: 300px;
+  margin: 10px;
+
+  header {
+    height: 40px;
+    background: #fd9089;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+  }
+}
+
+.time-box {
+  float: left;
+  width: 15%;
+  border: 1px solid rgb(19, 76, 76);
+}
+
+.event-box {
+  float: left;
+  min-width: 30%;
+  max-width: 90%;
+  border: 1px solid rgb(19, 76, 76);
+}
+
+.chip {
+  padding: 0 25px;
+  background-color: #f1f1f1;
+  float: left;
+  border: 1px solid #ebeaf3;
+}
+
+.cols {
+  height: 60px;
+  border-bottom: 1px solid #e2dfdf;
+  padding: 0 0 0 5px;
+}
+
+.inner-div {
+  float: left;
+  width: 30%;
+  border: 1px solid rgb(19, 76, 76);
+}
+

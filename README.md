@@ -1,9 +1,9 @@
 # CalendarChallenge
 
 # Functionality
-This app is developed without using CSS Grid to properly demonstrate logic using javascript concepts.
-The start and end are minutes since 9am, so 30 is 9:30 am, 120 is 11am, etc. 
-const events = [{start: 30, end: 120}, {start: 300, end: 330}, {start: 290, end: 330}]
+- This app is developed without using CSS Grid to properly demonstrate logic using javascript concepts.
+- The start and end are minutes since 9am, so 30 is 9:30 am, 120 is 11am, etc. 
+- example: const events = [{start: 30, end: 120}, {start: 300, end: 330}, {start: 290, end: 330}]
 
 ## Pre-reqs
 
